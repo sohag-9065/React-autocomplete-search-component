@@ -19,9 +19,9 @@ const Signup = () => {
         <div className='flex flex-col items-center justify-center mt-20'>
             <h1 className='text-3xl text-center mb-12'>Sign Up</h1>
             <form onSubmit={handleSubmit} className='flex flex-col gap-8'>
-                <input className='h-12 w-80 p-4 ' type="text" name="text" id="text" placeholder='Enter Name' />
-                <input className='h-12 w-80 p-4 ' type="email" name="email" id="email" placeholder='Email' />
-                <input className='h-12 w-80 p-4 ' type="password" name="password" id="password" placeholder='Password' />
+                <input className='h-12 w-80 p-4 border' type="text" name="text" id="text" placeholder='Enter Name' />
+                <input className='h-12 w-80 p-4 border' type="email" name="email" id="email" placeholder='Email' />
+                <input className='h-12 w-80 p-4 border' type="password" name="password" id="password" placeholder='Password' />
                 <p>
                     <span className='label-text-alt pr-2'>Already have an account?</span>
                     <Link to="/login" className="label-text-alt">Please Login.</Link>

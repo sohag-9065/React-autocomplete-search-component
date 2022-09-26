@@ -1,7 +1,8 @@
 import { useState } from "react";
+import './AutoComplete.css'
 
 const AutoComplete = ({ data }) => {
-    
+
   const [suggestions, setSuggestions] = useState([]);
   const [suggestionIndex, setSuggestionIndex] = useState(0);
   const [suggestionsActive, setSuggestionsActive] = useState(false);
@@ -63,6 +64,8 @@ const AutoComplete = ({ data }) => {
             >
               {suggestion}
             </li>
+
+
           );
         })}
       </ul>
@@ -71,7 +74,7 @@ const AutoComplete = ({ data }) => {
 
   return (
     <div className="autocomplete ">
-        <h1 className="mb-4 text-center">Search Item</h1>
+      <h1 className="mb-4 text-center">Search Item</h1>
       <input className="w-60 p-2 mb-4"
         type="text"
         value={value}
@@ -79,9 +82,17 @@ const AutoComplete = ({ data }) => {
         onKeyDown={handleKeyDown}
       />
       {suggestionsActive && <Suggestions />}
+      <div className="flex gap-2 justify-between bg-red-600">
+        <div>
+          <h1>Dhaka</h1>
+        </div>
+        <div>
+          <h2>Rayhan</h2>
+        </div>
+      </div>
     </div>
   );
-  
+
 };
 
 export default AutoComplete;
